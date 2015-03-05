@@ -1,0 +1,8 @@
+par(mfrow = c(2,2))
+plot(hpc_s$DateTime,hpc_s$Global_active_power,type="l",xlab="",ylab="")
+plot(hpc_s$DateTime,hpc_s$Voltage,type="l",xlab="datetime",ylab="Voltage")
+plot(hpc_s$DateTime,hpc_s$Sub_metering_1,col="black",type="l",ylab="Energy Sub Metering",xlab="")
+lines(hpc_s$DateTime,hpc_s$Sub_metering_2,col="red")
+lines(hpc_s$DateTime,hpc_s$Sub_metering_3,col="blue")
+legend("topright",c("Sub_metering_1","Sub_metering_2","Sub_metering_3"),lty=c(1,1),lwd=c(2.5,2.5,2.5),col=c("black","blue","red"))
+plot(hpc_s$DateTime,hpc_s$Global_reactive_power,type="l",xlab="datetime",ylab="Global_reactive_power")
